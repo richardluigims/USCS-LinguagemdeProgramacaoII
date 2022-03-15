@@ -13,11 +13,7 @@ namespace Projeto_Aluno
             int x; //classe vem antes do objeto 
             Aluno ric, and, gab, edu; // não é recomendável criar objetos com nomes, por conta da quantidade
 
-            edu = new Aluno();
-            edu.DefineNome("Eduardo Limoeiro");
-            edu.DefineIdade(78);
-            edu.DefineP1(9.8);
-            edu.DefineP2(1.2);
+            edu = new Aluno("Eduardo Limoeiro", 78, 9.8, 1.2);
 
             ric = new Aluno();
             ric.DefineNome("Richard Santos");
@@ -47,6 +43,16 @@ namespace Projeto_Aluno
         private String nome; // escrever "public" para que a classe Main acesse Aluno
         private int idade;
         private double p1, p2, mediaFinal; // usar double para não precisar "f" no fim do valor
+
+        public Aluno(string nome, int idade, double p1, double p2)
+        {
+            this.nome = nome;
+            this.idade = idade;
+            this.p1 = p1;
+            this.p2 = p2;
+        }
+
+        public Aluno () { } // criar esse construtor porque o ric é diferente
 
         public string PegaNome ()
         {
