@@ -54,7 +54,9 @@ namespace Conta_Forms
             c.titular = "Paulo Souza";
             c.saldo = 2678.33;
             lblTitular.Text = c.titular;
-        }
 
+            c.Sacar(678.33);
+            lblSaldo.Text = c.saldo.ToString();
+        }
     }
 }
