@@ -52,12 +52,13 @@ namespace Conta_Forms
             c.saldo = 1000;
             lblTitular.Text = c.titular;
             lblSaldo.Text = c.saldo.ToString();
+            txtValor.Text = "0";
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             lblTitular.Text = c.titular;
-            c.Sacar(678.33);
+            c.Sacar(double.Parse (txtValor.Text));
             lblSaldo.Text = c.saldo.ToString();
         }
 
