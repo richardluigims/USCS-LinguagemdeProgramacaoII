@@ -12,7 +12,7 @@ namespace Conta_Forms
         public string titular;
         public double saldo;
 
-        public bool Saca (double valor)
+        public bool Sacar (double valor)
         {
             if (this.saldo >= valor)
             {
@@ -42,21 +42,24 @@ namespace Conta_Forms
 {
     public partial class Form1 : Form
     {
+        Conta c;
         public Form1()
         {
             InitializeComponent();
+            c = new Conta();
+            c.numero = 1000;
+            c.titular = "Paulo Souza";
+            c.saldo = 1000;
+            lblTitular.Text = c.titular;
+            lblSaldo.Text = c.saldo.ToString();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Conta c = new Conta(); // método button click
-            c.numero = 1000;
-            c.titular = "Paulo Souza";
-            c.saldo = 2678.33;
             lblTitular.Text = c.titular;
-
             c.Sacar(678.33);
             lblSaldo.Text = c.saldo.ToString();
         }
+
     }
 }
