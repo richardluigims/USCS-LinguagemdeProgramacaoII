@@ -15,5 +15,3 @@ namespace Projeto1
         }
     }
 }
-
-C#
