@@ -21,7 +21,7 @@ namespace ConsoleApp1
 
             for (int num = 0; num < 10; num++)
             {
-                Console.WriteLine("Na posição {0} tem o numero {1}", num, vet[num], vet[num]);
+                Console.WriteLine("Na posição {0} tem o numero {1}", num, vet[num]);
             }
         }
     }
